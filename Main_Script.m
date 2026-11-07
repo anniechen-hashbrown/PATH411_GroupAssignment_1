@@ -1,3 +1,14 @@
+STEP 20 NEW Q CHECK
+
+for q = [0.25 0.50 0.75]
+    n_low = sum(MarkLowCounts(selected_data, q));
+    fprintf('Q = %.2f removes %d of %d miRNAs (%.1f%%), retains %d\n', ...
+        q, n_low, size(selected_data,1), 100*n_low/size(selected_data,1), size(selected_data,1)-n_low);
+end
+
+
+
+
 
 %% Step 19a: Check sample quality with IQR and Spearman Corr
 % I decided to use the RF-normalized data (chosen in Step 18).
